@@ -1,24 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@drawable/zodiac_portrait"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_app_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:paddingBottom="40dp"
-                        />
+        android:text="@string/prompt_text"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+
+    <Spinner
+    android:id="@+id/sunSign"
+    android:layout_width="291dp"
+    android:layout_height="48dp"
+    android:layout_marginTop="35dp"
+    android:background="@android:color/holo_blue_light"
+    android:gravity="end"
+    app:layout_constraintEnd_toStartOf="@+id/backgroundImageView"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toEndOf="@+id/backgroundImageView"
+    app:layout_constraintTop_toBottomOf="@+id/promptTextView"
+    android:autofillHints="Select your sun "
+    />
 
     <Button
-        android:id="@+id/getReport"
+        android:id="@+id/get_predictions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Get Report"/>
+        android:text="@string/submit_button"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+
+
+        />
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="fill_horizontal"
+        android:justificationMode="inter_word"
+        android:paddingBottom="417dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:visibility="visible" />
+
+
+
 
 </LinearLayout>
